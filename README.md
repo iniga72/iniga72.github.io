@@ -2,30 +2,55 @@
 
 # Create VK Mini App [![npm][npm]][npm-url] [![deps][deps]][deps-url]
 
-## How to install
+## How to use
 
-### Create VK Mini App with gh-pages deploy
+### With NPX
 
-`npx @vkontakte/create-vk-mini-app <app-directory-name>`
+```bash
+npx @vkontakte/create-vk-mini-app [app-directory-name] [options]
+```
+[NPX](https://github.com/npm/npx) allows you to always use the **latest** version of the package without a global installation.
 
-### Create VK Mini App with Zeit deploy
+### With installing the package globally
+Install the package globally via yarn
+```bash
+yarn global add @vkontakte/create-vk-mini-app
+```
+...or npm
+```bash
+npm install --global @vkontakte/create-vk-mini-app
+```
 
-Firstly, you have to create Zeit account and connect it with your GitHub profile — https://zeit.co/
+and use as follows
 
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --zeit`
+```bash
+create-vk-mini-app [app-directory-name] [options]
+```
 
-### Create VK Mini App with Surge deploy
+This way is less recommended because you will have to update the package yourself.
 
-Firstly, you have to create Surge account and Surge-domain — https://surge.sh/
+### Options
+Without `--zeit` and `--surge` options 
 
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --surge <surge-domain>`
+#### `--zeit`
+Vercel (Zeit) deploy
+
+Firstly, you have to create Vercel account and connect it with your GitHub profile on [vercel.com](https://vercel.com)
+
+#### `--surge <surge-domain>`
+Surge deploy
+
+Firstly, you have to create Surge account and Surge-domain on [surge.sh](https://surge.sh)
+
+#### `--help`
+Prints the synopsis and a list of options
 
 ## How to start work with app
 
-Go to created folder and run:
-`yarn start` || `npm start` — this will start dev server with hot reload on `localhost:10888`.
+Go to created folder and run:  
+`yarn start` or  `npm start` to start dev server with hot reload on `localhost:10888`.
 
-`yarn run build` || `npm run build` — this will build production bundle, with tree-shaking, uglify and all this modern fancy stuff
+`yarn run build` or `npm run build` to build production bundle, with tree-shaking, uglify and all this modern fancy stuff.
 
 [npm]: https://img.shields.io/npm/v/@vkontakte/create-vk-mini-app.svg
 [npm-url]: https://npmjs.com/package/@vkontakte/create-vk-mini-app
