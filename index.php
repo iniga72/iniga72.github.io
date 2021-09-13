@@ -53,7 +53,7 @@ curl_close( $curl );
 
 // Show result
 //echo $response . "\n";
-echo date("U");
+echo date("U1");
 
 
 ?>
