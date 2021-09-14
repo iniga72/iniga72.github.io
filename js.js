@@ -1,6 +1,6 @@
 window.onload = function() {var yourDate = new Date()
     var x = new XMLHttpRequest();
-	var paramsString = document.location.search; // ?page=4&limit=10&sortby=desc  
+	var paramsString = document.location.hash; // ?page=4&limit=10&sortby=desc  
 var searchParams = new URLSearchParams(paramsString);
     
 
