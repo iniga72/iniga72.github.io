@@ -7,7 +7,7 @@
 }
 /* оформляем текст label */
 .hide + label {
-    border-bottom: 1px dotted green;
+    border-bottom: 1px dotted rgb(0, 38, 255);
     padding: 0;
     color: green;
     cursor: pointer;
@@ -15,7 +15,7 @@
 }
 /* вид текста label при активном переключателе */
 .hide:checked + label {
-    color: red;
+    color: rgb(0, 255, 34);
     border-bottom: 0;
 }
 /* когда чекбокс активен показываем блоки с содержанием  */
