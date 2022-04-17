@@ -1,34 +1,46 @@
 /* скрываем чекбоксы и блоки с содержанием */
-.hide {
-    display: none; 
+#slider{
+    width: 400px;
+    border-radius: 10px;
+    color: red;
 }
-.hide + label ~ div{
-    display: none;
-}
-/* оформляем текст label */
-.hide + label {
-    border-bottom: 1px dotted rgb(0, 38, 255);
-    padding: 0;
-    color: green;
-    cursor: pointer;
-    display: inline-block; 
-}
-/* вид текста label при активном переключателе */
-.hide:checked + label {
-    color: rgb(0, 255, 34);
-    border-bottom: 0;
-}
-/* когда чекбокс активен показываем блоки с содержанием  */
-.hide:checked + label + div {
-    display: block; 
-    background: #efefef;
-    -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
-    -webkit-box-shadow: inset 3px 3px 10px #7d8e8f;
-    box-shadow: inset 3px 3px 10px #7d8e8f;
-    padding: 10px; 
+@keyframes fade {
+  0% { opacity: 0; }
+  11.11% { opacity: 1; }
+  33.33% { opacity: 1; }
+  44.44% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-/* demo контейнер */
-.demo {
-    margin: 5% 10%;
+.fadein div, img{ 
+    max-width: 400px;
+    max-height: 200px;
+
+    position: relative;
+ }
+.fadein div { position:absolute; width:100%; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 9s; animation-iteration-count: infinite; }
+.fadein div:nth-child(1) { animation-delay: 0s; }
+.fadein div:nth-child(2) { animation-delay: 3s; }
+.fadein div:nth-child(3) { animation-delay: 6s; }
+
+
+
+/* Style the button and place it in the middle of the container/image */
+.fadein .btn {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-20%, -50%);
+  background-color: #ff9f29;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.fadein .btn:hover {
+  background-color: black;
 }
